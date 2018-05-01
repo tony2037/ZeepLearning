@@ -10,5 +10,5 @@ typedef struct model
 int init_model(model *m);
 int summary_model(model *m);
 int model_add(model *m, FC *f);
-double forward(model *m, double *x, double(*LOSS)(double,double));
+double forward(model *m, double *x, double *y ,double(*LOSS)(double,double));
 #endif // !ZEEPLEARNING_MODEL

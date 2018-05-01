@@ -110,11 +110,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="activation.cpp" />
     <ClCompile Include="Fully_Connect.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="model.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="activation.h" />
     <ClInclude Include="Fully_Connect.h" />
     <ClInclude Include="model.h" />
   </ItemGroup>

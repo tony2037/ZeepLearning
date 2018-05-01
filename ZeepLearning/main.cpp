@@ -1,6 +1,13 @@
 #include "Fully_Connect.h"
 #include "model.h"
 
+double test_x[3] = {2,4,6};
+double test_y[1] = {3};
+
+double LOSS(double y, double y_) {
+	// you should implement this part for this version
+	return y - y_;
+};
 
 int main() {
 	/*
@@ -18,7 +25,12 @@ int main() {
 	init_FC(&fc2, 2, 4, "relu");
 	model_add(&m1, &fc2);
 
+	FC fc3;
+	init_FC(&fc3, 4, 1, "sigmoid");
+	model_add(&m1, &fc3);
+
 	summary_model(&m1);
 
+	forward(&m1, test_x, test_y, LOSS);
 	return 0;
 }

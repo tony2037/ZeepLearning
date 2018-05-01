@@ -24,12 +24,18 @@
     <ClCompile Include="model.cpp">
       <Filter>原始程式檔</Filter>
     </ClCompile>
+    <ClCompile Include="activation.cpp">
+      <Filter>原始程式檔</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Fully_Connect.h">
       <Filter>原始程式檔</Filter>
     </ClInclude>
     <ClInclude Include="model.h">
+      <Filter>原始程式檔</Filter>
+    </ClInclude>
+    <ClInclude Include="activation.h">
       <Filter>原始程式檔</Filter>
     </ClInclude>
   </ItemGroup>
