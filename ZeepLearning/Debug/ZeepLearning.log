@@ -1,0 +1,9 @@
+﻿  model.cpp
+c:\users\user\documents\visual studio 2015\projects\zeeplearning\zeeplearning\model.cpp(42): error C2440: '=': 無法由 'void *' 轉換為 'double *'
+  c:\users\user\documents\visual studio 2015\projects\zeeplearning\zeeplearning\model.cpp(42): note: 從非 'void' 的指標轉換為 'void*' 必須是明確轉換
+  Fully_Connect.cpp
+c:\users\user\documents\visual studio 2015\projects\zeeplearning\zeeplearning\fully_connect.cpp(12): warning C4018: '<': signed/unsigned 不相符
+  正在產生程式碼...
+  正在編譯...
+  main.cpp
+  正在產生程式碼...
