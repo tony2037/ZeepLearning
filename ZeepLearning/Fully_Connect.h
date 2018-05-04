@@ -9,6 +9,7 @@ typedef struct Fully_Connect
 	char *activation;
 	double **Weights;	// shape = (output, input)
 	double *Bias;	// shape = (output)
+	double *Output;	// the output of this layer
 	struct Fully_Connect *next_layer;
 	} FC;
 

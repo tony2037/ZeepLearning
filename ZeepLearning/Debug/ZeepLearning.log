@@ -1,3 +1,4 @@
 ﻿  main.cpp
+c:\users\user\documents\visual studio 2015\projects\zeeplearning\zeeplearning\main.cpp(21): warning C4477: 'printf' : 格式字串 '%d' 需要 'int' 類型的引數，但 variadic 引數 1 的類型為 'double'
   ZeepLearning.vcxproj -> C:\Users\User\documents\visual studio 2015\Projects\ZeepLearning\Debug\ZeepLearning.exe
   ZeepLearning.vcxproj -> C:\Users\User\documents\visual studio 2015\Projects\ZeepLearning\Debug\ZeepLearning.pdb (Partial PDB)

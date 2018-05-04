@@ -1,13 +1,11 @@
 #include "Fully_Connect.h"
 #include "model.h"
+#include "LossFunction.h"
+
 
 double test_x[3] = {2,4,6};
 double test_y[1] = {3};
 
-double LOSS(double y, double y_) {
-	// you should implement this part for this version
-	return y - y_;
-};
 
 int main() {
 	/*
@@ -15,6 +13,7 @@ int main() {
 	init_FC(&fc1, 2, 3, "relu");
 	summary_FC(&fc1);
 	*/
+
 	model m1;
 	init_model(&m1);
 	FC fc1;
@@ -31,6 +30,6 @@ int main() {
 
 	summary_model(&m1);
 
-	forward(&m1, test_x, test_y, LOSS);
+	forward(&m1, test_x, test_y, sqr_loss);
 	return 0;
 }

@@ -4,6 +4,7 @@
 
 int init_FC(FC * fc, int input_size, int output_size , char *activation)
 {
+	fc->Output = (double*)malloc((output_size)* sizeof(double));
 	fc->input_size = input_size;
 	fc->output_size = output_size;
 	printf("%c", *activation);
