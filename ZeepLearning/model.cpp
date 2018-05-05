@@ -8,6 +8,7 @@ int init_model(model * m)
 {
 	m->FC_head = NULL;
 	m->layers_num = 0;
+	m->Cost = 0.0;
 	return 0;
 }
 
@@ -43,13 +44,20 @@ double forward(model * m, double *x, double *y, double(*LOSS)(double, double))
 	else {
 		while (travel != NULL) {
 			current_output = (double*)malloc(sizeof(double) * travel->output_size);
-			memset(current_output,0,travel->output_size);
+			memset(current_output,0,travel->output_size* sizeof(double));
+
+			for (size_t i = 0; i < travel->input_size; i++)travel->Input[i] = current_input[i];
 			for (size_t i = 0; i < travel->output_size; i++) {
 				for (size_t j = 0; j < travel->input_size; j++)
 					current_output[i] += travel->Weights[i][j] * current_input[j] + travel->Bias[i];
+
+				travel->Output[i] = current_output[i];
 				current_output[i] = activate(current_output[i], travel->activation);
+				travel->OutputActivate[i] = current_output[i];
 			}
-			current_input = current_output;
+			current_input = (double*)malloc(sizeof(double)* travel->output_size);
+			for (size_t i = 0; i < travel->output_size; i++)current_input[i] = current_output[i];
+
 			current_output_size = travel->output_size;
 			travel = travel->next_layer;
 		}
@@ -59,7 +67,9 @@ double forward(model * m, double *x, double *y, double(*LOSS)(double, double))
 		for (size_t i = 0; i < current_output_size; i++) {
 			cost += LOSS(current_output[i], y[i]);
 		}
+		m->Cost = cost;
 		printf("# Cost : %LF", cost);
+		return cost;
 	}
 	
 }

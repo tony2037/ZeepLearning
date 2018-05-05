@@ -117,10 +117,12 @@
     <ClCompile Include="model.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Activate.h" />
     <ClInclude Include="activation.h" />
     <ClInclude Include="Fully_Connect.h" />
     <ClInclude Include="LossFunction.h" />
     <ClInclude Include="model.h" />
+    <ClInclude Include="Optimize.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

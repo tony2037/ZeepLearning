@@ -5,6 +5,7 @@ typedef struct model
 {
 	FC *FC_head;
 	int layers_num;	// sizeof model shape - 1, numbers of FCs
+	double Cost;	// Cost
 }model;
 
 int init_model(model *m);
